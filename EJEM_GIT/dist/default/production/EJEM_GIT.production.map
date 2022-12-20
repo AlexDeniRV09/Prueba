@@ -67,10 +67,10 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x19c           0x26a  (618)
-.text                        0x39c                 0xe            0x15  (21)
-data_init_dualch.S.scn1      0x3aa                 0x2             0x3  (3)
+.text                        0x39c                0x12            0x1b  (27)
+data_init_dualch.S.scn1      0x3ae                 0x2             0x3  (3)
 
-                 Total "program" memory used (bytes):          0x282  (642) <1%
+                 Total "program" memory used (bytes):          0x288  (648) <1%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0xc000]
@@ -97,11 +97,11 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00023a                  __psv_init
-                  0x000246                  __data_init
                   0x000246                  __data_init_duo
+                  0x000246                  __data_init
                   0x0002f8                  __wipe_secondary
-                  0x00032e                  __program_inactive_slave
                   0x00032e                  __program_inactive_secondary
+                  0x00032e                  __program_inactive_slave
                   0x000332                  __program_secondary
                   0x000332                  __program_slave
                   0x00037e                  __start_secondary
@@ -110,9 +110,11 @@ External Symbols in Program Memory (by address):
                   0x00038a                  __stop_secondary
                   0x000396                  __DefaultInterrupt
                   0x00039c                  _main
+                  0x0003a8                  _Ports_Init
 
 External Symbols in Program Memory (by name):
 
+                  0x0003a8                  _Ports_Init
                   0x000396                  __DefaultInterrupt
                   0x000246                  __data_init
                   0x000246                  __data_init_duo
@@ -387,22 +389,22 @@ __FBTSEQ
 .comment
  *(.comment)
 
-.debug_info       0x000000        0x186
+.debug_info       0x000000        0x1a0
  *(.debug_info)
- .debug_info      0x000000        0x186 build/default/production/main.o
+ .debug_info      0x000000        0x1a0 build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000         0x50
+.debug_abbrev     0x000000         0x65
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0x50 build/default/production/main.o
+ .debug_abbrev    0x000000         0x65 build/default/production/main.o
 
-.debug_line       0x000000         0x35
+.debug_line       0x000000         0x37
  *(.debug_line)
- .debug_line      0x000000         0x35 build/default/production/main.o
+ .debug_line      0x000000         0x37 build/default/production/main.o
 
-.debug_frame      0x000000         0x2e
+.debug_frame      0x000000         0x48
  *(.debug_frame)
- .debug_frame     0x000000         0x2e build/default/production/main.o
+ .debug_frame     0x000000         0x48 build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -411,10 +413,10 @@ __FBTSEQ
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000         0x1b
+                  0x000000         0x2a
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x1b build/default/production/main.o
+                  0x000000         0x2a build/default/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -3877,11 +3879,12 @@ __c30_signature
  __c30_signature
                   0x000036          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_dualch.o)
 
-.text             0x00039c          0xe
- .text            0x00039c          0xe build/default/production/main.o
+.text             0x00039c         0x12
+ .text            0x00039c         0x12 build/default/production/main.o
                   0x00039c                  _main
+                  0x0003a8                  _Ports_Init
 
 data_init_dualch.S.scn1
-                  0x0003aa          0x2
+                  0x0003ae          0x2
  data_init_dualch.S.scn1
-                  0x0003aa          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_dualch.o)
+                  0x0003ae          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_dualch.o)
